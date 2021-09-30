@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Press+Start+2P&display=swap');
+body{
+    background-color: #dbb477;
+}
+h1{
+    background-color: rgba(43, 178, 202, 0.904);
+    font-family: 'Noto Sans', sans-serif;
+    color: #d75914;
+}
+h1> span{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+}
+h2{
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(96, 174, 238), 0 0 25px rgb(45, 149, 247), 0 0 5px rgb(85, 148, 241);
+}
+h4{
+    font-size: larger;
+    text-shadow: 1px 1px 2px rgb(96, 174, 238), 0 0 25px rgb(45, 149, 247), 0 0 5px rgb(85, 148, 241);
+    text-align: center;
+}
+h5{
+    font-size: larger;
+    text-shadow: 1px 1px 2px rgb(96, 174, 238), 0 0 25px rgb(45, 149, 247), 0 0 5px rgb(85, 148, 241);
+    text-align: center;
+}
+h5>span{
+  border-bottom: 5px double rgba(43, 178, 202, 0.904);
+}
+h6{
+    margin-top: 80px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(43, 178, 202, 0.904);
+    font-size: large;
+}
+p{
+    text-align: center;
+}
+img{
+  width: 160px;
+  margin: 15px;
+}
+select{
+  margin-left: 15px;
+}
+
+select > option{
+  background-color: rgba(43, 178, 202, 0.904); 
+}
+
+.topbar{
+    height: 250px;
+    background-image: url("./iconsExercise/wallpaper.jpg");
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px ;
+
+}
+.choices{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.size{
+    width:200px ;
+    border: 5px double rgba(43, 178, 202, 0.904);
+    border-radius: 25px;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+.footer{
+  background-color: rgba(43, 178, 202, 0.904);
+  padding:30px;
+}
+
+button{
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: #dacc9d;
+    height: 65px;
+    line-height: 20px;
+    padding: 0 10px;
+    display: inline-block;
+    width: 150px;
+    background-color: rgba(43, 178, 202, 0.904);
+    border-radius: 5px;
+    border-top: 1px solid #c8e2d3;
+    border-bottom: 1px solid #c2dece;
+    top: 0;
+    transition: all 0.06s ease-out;
+    position: relative;
+}
+button:hover {
+    background: linear-gradient(to bottom, #e2e7e4 0%, rgba(43, 178, 202, 0.904) 50%, #e2e7e4 100%);
+}
+button:active {
+    top: 10px;
+    color: white;
+  }
+button:active:before {
+  top: 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+}
+button:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 6px;
+  border-radius: 5px;
+  height: 65px;
+  background: linear-gradient(to top, #2e6f79 0%, #3ba4be 6px);
+  transition: all 0.078s ease-out;
+  box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3), 0 5px 2.4px rgba(0, 0, 0, 0.5), 0 10.8px 9px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:870px)and (min-width: 600px){
+  .main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width:600px){
+  h4{
+    font-size: large;
+  }
+  h5{
+    font-size: large;
+  }
+  h6{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(43, 178, 202, 0.904);
+    font-size: medium;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px ;
+  }
+  .choices{
+    display: flex;
+    flex-direction: column;
+  }
+}

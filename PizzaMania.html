@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PizzaMania</title>
+    <link rel="stylesheet" href="pizzaMania.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <h1>ΚΑΛΩΣΗΡΘΕΣ ΣΤΟ <span>PizzaMania</span></h1>
+        <h6>Ακολούθησε τα βήματα και φτιάξε την πίτσα της επιλογής σου, διαλέγοντας μέσα από μια μεγάλη ποικιλία
+            φρέσκων υλικών ή επίλεξε μόνο το ζυμαράκι για σπιτικές δημιουργίες.</h6>
+    </div>
+
+    <div class="main">
+        <div class="size">
+            <h5>Επίλεξε το μέγεθος που επιθυμείς</h5>
+            <hr>
+            <select id="selectBox" onchange="changeFunc()">
+                <option value="0">--Επιλογές--</option>
+                <option id="atomiki" value="0.3">Ατομική (0.30€)</option>
+                <option id="oikogeniaki" value="2.60">Οικογενειακή (2.60€)</option>
+                <option id="megali" value="4">Μεγάλη (4.00€)</option>
+                <option id="gigas" value="5">Γίγας (5.00€)</option>
+            </select>
+            <br>
+            <img src="">
+        </div>
+
+        <div class="taste">
+            <input id="sweet" type="radio" name="selection" value="0">
+            <label for="sweet">Γλυκιά Πίτσα</label><br>
+            <input id="savory" type="radio" name="selection" value="0">
+            <label for="savory">Αλμυρή Πίτσα</label><br>
+        </div>
+        <div class="choices">
+            <div class="sweet" id="sw">
+                <h5><span>Γλυκιές Επιλογές</span></h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label><input name="sel-chocolate" type="radio" value="1" disabled onclick="selChoco()"> Πραλίνα
+                                Φουντουκιού</label></td>
+                            <td>1.00€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="sel-chocolate" type="radio" value="1.20" disabled onclick="selChoco()">
+                                Πραλίνα Λευκής
+                                Σοκολάτας</label></td>
+                            <td>1.20€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="sel-chocolate" type="radio" value="1.20" disabled onclick="selChoco()">
+                                Πραλίνα Μαύρης
+                                Σοκολάτας</label></td>
+                            <td>1.20€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="sel-chocolate" type="radio" value="1.20" disabled onclick="selChoco()">
+                                Πραλίνα
+                                Μπουένο</label></td>
+                            <td>1.20€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label><input name="ingr1" type="checkbox" value="0.80" disabled> Μπανάνα</label></td>
+                            <td>0.80€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr2" type="checkbox" value="0.80" disabled> Φράουλα</label></td>
+                            <td>0.80€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr3" type="checkbox" value="0.50" disabled> Τριμμένο Μπισκότο</label></td>
+                            <td>0.50€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr4" type="checkbox" value="0.70" disabled> Τριμμένο Μπισκότο ΟREO</label></td>
+                            <td>0.70€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr5" type="checkbox" value="0.40" disabled> Τρούφα Σοκολάτα</label></td>
+                            <td>0.40€</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="savory" id="sav">
+                <h5><span>Αλμυρές Προτάσεις</span></h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td> <label><input name="sel-cheese" type="radio" value="0.70" disabled onclick="selCheese()">
+                                Κασέρι Γούντα</label></td>
+                                <td>0.70€</td>
+                        </tr>
+                        <tr>
+                            <td> <label><input name="sel-cheese" type="radio" value="0.90" disabled onclick="selCheese()"> 4
+                                Tυριά</label></td> 
+                                <td>0.90€</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <hr>
+    
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label><input name="ingr6" type="checkbox" value="0.30" disabled> Πιπεριά</label></td>
+                            <td>0.30€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr7" type="checkbox" value="0.40" disabled> Καυτερή Πιπεριά</label></td>
+                            <td>0.40€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr8" type="checkbox" value="0.50" disabled>Μανιτάρια</label></td>
+                            <td>0.50€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr9" type="checkbox" value="0.50" disabled> Μπέικον</label></td>
+                            <td>0.50€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr10" type="checkbox" value="0.60" disabled> Ελιές</label></td>
+                            <td>0.60€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr11" type="checkbox" value="0.80" disabled> Φέτα</label></td>
+                            <td>0.80€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr12" type="checkbox" value="0.70" disabled> Τηγανιτές Πατάτες</label></td>
+                            <td>0.70€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr13" type="checkbox" value="0.40" disabled> Πεπερόνι</label></td>
+                            <td>0.40€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr14" type="checkbox" value="0.20" disabled> Τοματίνια</label></td>
+                            <td>0.20€</td>
+                        </tr>
+                        <tr>
+                            <td><label><input name="ingr15" type="checkbox" value="0.90" disabled> Κοτόπουλο</label></td>
+                            <td>0.90€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+            </div>
+        </div>
+        
+    </div>
+    <div class="results">
+        <h2>Υπολόγισε τώρα το κόστος της αγαπημένης σου πίτσας</h2>
+        <div class="buttons">
+            <button id="calculate">Υπολογισμός...</button>
+            <button id="clear">Εκκαθάριση Επιλογών</button>
+        </div>
+        <h4></h4>
+    </div>
+    <div class="footer">
+        <p>© Copyright 2021 | PizzaMania </p>
+        <p>Αυτή η σελίδα δημιουργήθηκε στα πλαίσια ακαδημαικής εργασίας.</p>
+        <p>ICS20038</p>
+    </div>
+    <script src="pizzaMania.js"></script>
+</body>
+
+</html>
